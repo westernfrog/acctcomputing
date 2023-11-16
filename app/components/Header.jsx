@@ -25,7 +25,7 @@ const navigation = [
     href: "/paper-submission",
     icon: DocumentArrowDownIcon,
   },
-  { name: "Contact", href: "/", icon: PhoneIcon },
+  { name: "Contact", href: "/contact", icon: PhoneIcon },
 ];
 
 export default function Header() {
