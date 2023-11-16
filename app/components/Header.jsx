@@ -14,6 +14,7 @@ import {
 } from "@heroicons/react/24/outline";
 
 import Link from "next/link";
+import Image from "next/image";
 
 const navigation = [
   { name: "Home", href: "/", icon: HomeIcon },
@@ -39,10 +40,12 @@ export default function Header() {
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Acctcomputing</span>
-            <img
-              className="h-8 w-auto"
-              src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-              alt=""
+            <Image
+              width={100}
+              height={100}
+              className="h-10 w-auto"
+              src="https://acctcomputing.com/wp-content/uploads/2023/07/WhatsApp-Image-2023-07-05-at-7.33.41-PM-1.jpeg"
+              alt="Acctcomputing"
             />
           </Link>
         </div>
@@ -89,10 +92,12 @@ export default function Header() {
           <div className="flex items-center justify-between">
             <Link href="/" className="-m-1.5 p-1.5">
               <span className="sr-only">Acctcomputing</span>
-              <img
-                className="h-8 w-auto"
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                alt=""
+              <Image
+                width={100}
+                height={100}
+                className="h-10 w-auto"
+                src="https://acctcomputing.com/wp-content/uploads/2023/07/WhatsApp-Image-2023-07-05-at-7.33.41-PM-1.jpeg"
+                alt="Acctcomputing"
               />
             </Link>
             <button
