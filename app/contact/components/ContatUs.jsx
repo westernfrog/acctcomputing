@@ -101,7 +101,8 @@ const ContactPage = () => {
                   target="_blank"
                   href="https://goo.gl/maps/QcWzYETAh4FS3KTD7"
                 >
-                  Swami Vivekanand Institute of Engineering and Technology (SVIET), Banur, Punjab, India
+                  Swami Vivekanand Institute of Engineering and Technology
+                  (SVIET), Banur, Punjab, India
                 </a>
               </div>
             </div>

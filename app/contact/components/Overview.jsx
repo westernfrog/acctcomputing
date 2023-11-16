@@ -1,5 +1,4 @@
 import Link from "next/link";
-import "./contact.css";
 import ContactPage from "./ContatUs";
 export default function Overview(params) {
   return (
