@@ -22,7 +22,7 @@ const information = [
 export default function Footer(params) {
   return (
     <>
-      <footer className="text-zinc-400 border-t border-neutral-900 lg:pt-12">
+      <footer className="text-zinc-400 border-t border-neutral-900 pt-12">
         <div className="max-w-7xl mx-auto flex lg:flex-row flex-col items-start justify-between p-6 space-y-6 lg:space-y-0">
           <div className="max-w-sm">
             <h1 className="text-zinc-300 font-medium">
