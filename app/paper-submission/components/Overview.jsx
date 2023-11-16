@@ -57,12 +57,14 @@ export default function Overview(params) {
                 etc…in your paper.
               </li>
             </ul>
-            <h1 className="font-semibold">
-              To submit paper click on following link:
-            </h1>
-            <Link href="/" className="text-blue-600 hover:underline">
-              Microsoft CMT Paper Submission
-            </Link>
+            <div className="text-center pt-10">
+              <h1 className="font-semibold">
+                To submit paper click on following link:
+              </h1>
+              <Link href="/" className="text-blue-600 hover:underline">
+                Microsoft CMT Paper Submission
+              </Link>
+            </div>
           </div>
         </div>
       </main>

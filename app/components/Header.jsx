@@ -18,7 +18,7 @@ import Link from "next/link";
 const navigation = [
   { name: "Home", href: "/", icon: HomeIcon },
   { name: "Call for Papers", href: "/call-for-papers", icon: DocumentTextIcon },
-  { name: "Committee", href: "/", icon: UserGroupIcon },
+  { name: "Committee", href: "/committee", icon: UserGroupIcon },
   {
     name: "Paper Submission",
     href: "/paper-submission",
