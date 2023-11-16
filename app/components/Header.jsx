@@ -19,7 +19,11 @@ const navigation = [
   { name: "Home", href: "/", icon: HomeIcon },
   { name: "Call for Papers", href: "/call-for-papers", icon: DocumentTextIcon },
   { name: "Committee", href: "/", icon: UserGroupIcon },
-  { name: "Paper Submission", href: "/", icon: DocumentArrowDownIcon },
+  {
+    name: "Paper Submission",
+    href: "/paper-submission",
+    icon: DocumentArrowDownIcon,
+  },
   { name: "Contact", href: "/", icon: PhoneIcon },
 ];
 
@@ -66,7 +70,7 @@ export default function Header() {
         </div>
         <div className="hidden lg:flex flex-1 justify-end">
           <Link
-            href="/"
+            href="https://acctcomputing.netlify.app/"
             className="flex items-center gap-2 leading-6 text-zinc-300 hover:text-zinc-100 bg-zinc-900 px-4 py-2 rounded-xl transition duration-300 ease-in-out text-sm"
           >
             <LinkIcon className="w-5 h-5" />
@@ -119,7 +123,7 @@ export default function Header() {
                 </div>
                 <div className="py-8 border-t border-zinc-900">
                   <Link
-                    href="/"
+                    href="https://acctcomputing.netlify.app/"
                     className="flex items-center gap-2 leading-6 text-zinc-400 hover:text-zinc-300 py-2 rounded-full transition duration-300 ease-in-out"
                   >
                     <LinkIcon className="w-5 h-5" />

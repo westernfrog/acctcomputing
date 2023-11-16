@@ -100,7 +100,7 @@ export default function Overview(params) {
               <li>Please do not submit plagiarized papers.</li>
               <li>
                 Authors are requested to submit paper through given link:
-                <Link href="/" className="text-blue-600 px-2">
+                <Link href="/" className="text-blue-600 px-2 hover:underline">
                   Microsoft CMT Paper Submission Link
                 </Link>
               </li>
