@@ -19,7 +19,7 @@ const ContactPage = () => {
                 onClick={() =>
                   (window.location.href = "mailto:conf2023@sviet.ac.in")
                 }
-                class="flex flex-col items-center gap-3 px-8 py-10 bg-white rounded-3xl shadow-main"
+                class="flex flex-col transform transition duration-500 hover:scale-110 items-center gap-3 px-8 py-10 bg-white rounded-3xl shadow-main "
               >
                 <span>
                   <svg
@@ -48,7 +48,7 @@ const ContactPage = () => {
               </button>
               <button
                 onClick={() => (window.location.href = "tel:+919870398104")}
-                class="flex flex-col items-center gap-3 px-8 py-10 bg-white rounded-3xl shadow-main"
+                class="flex flex-col transform transition duration-500 hover:scale-110 items-center gap-3 px-8 py-10 bg-white rounded-3xl shadow-main"
               >
                 <span>
                   <svg
@@ -75,7 +75,7 @@ const ContactPage = () => {
                   +919870398104
                 </a>
               </button>
-              <div class="flex flex-col items-center w-96 justify-center gap-3 px-8 py-10 bg-white rounded-3xl shadow-main">
+              <button class="flex flex-col transform transition duration-500 hover:scale-110 items-center  justify-center gap-3 px-8 py-10 bg-white rounded-3xl shadow-main">
                 <span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -104,7 +104,7 @@ const ContactPage = () => {
                   Swami Vivekanand Institute of Engineering and Technology
                   (SVIET), Banur, Punjab, India
                 </a>
-              </div>
+              </button>
             </div>
           </div>
         </div>

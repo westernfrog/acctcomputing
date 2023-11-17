@@ -15,8 +15,12 @@ const social = [
 
 const information = [
   { name: "Banur, Punjab, India", icon: MapPinIcon },
-  { name: "+91 9216910212", icon: PhoneIcon },
-  { name: "conf2023@sviet.ac.in", icon: EnvelopeIcon },
+  { name: "+91 9216910212", icon: PhoneIcon, href: "tel:+919870398104" },
+  {
+    name: "conf2023@sviet.ac.in",
+    icon: EnvelopeIcon,
+    href: "mailto:conf2023@sviet.ac.in",
+  },
 ];
 
 export default function Footer(params) {
@@ -51,13 +55,14 @@ export default function Footer(params) {
           </div>
           <div className="flex flex-col">
             {information.map((item, index) => (
-              <h1
+              <a
+                href={item.href}
                 key={index}
-                className="hover:underline lg:pb-4 pb-2 flex items-center gap-6"
+                className=" transform transition duration-500 hover:scale-110 lg:pb-4 pb-2 flex items-center gap-6"
               >
                 <item.icon className="w-5 h-5 stroke-blue-600" />
                 {item.name}
-              </h1>
+              </a>
             ))}
           </div>
           <div className="lg:hidden block">
