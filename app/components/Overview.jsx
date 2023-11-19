@@ -6,8 +6,12 @@ import {
 import Link from "next/link";
 
 const links = [
-  { name: "Call for Papers", href: "/", icon: DocumentTextIcon },
-  { name: "Paper Submission", href: "/", icon: DocumentArrowDownIcon },
+  { name: "Call for Papers", href: "/call-for-papers", icon: DocumentTextIcon },
+  {
+    name: "Paper Submission",
+    href: "/paper-submission",
+    icon: DocumentArrowDownIcon,
+  },
 ];
 import { getDoc,doc } from "firebase/firestore";
 import { useEffect ,useState} from "react";

@@ -84,7 +84,7 @@ export default function Header() {
             <Link
               key={index}
               href={item.href}
-              className="flex items-center gap-2 leading-6 text-zinc-300 hover:text-zinc-100 bg-zinc-900 px-4 py-2 rounded-xl transition duration-300 ease-in-out text-sm"
+              className="flex items-center gap-1 leading-6 text-zinc-300 hover:text-zinc-100 bg-zinc-900 px-4 py-2 rounded-xl transition duration-300 ease-in-out text-sm"
             >
               <item.icon className="w-4 h-4" />
               {item.name}
