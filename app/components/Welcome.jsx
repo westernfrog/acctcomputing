@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 export default function Welcome(params) {
+  console.log(params)
   return (
     <>
       <div className="max-w-5xl mx-auto mb-40">
@@ -37,12 +38,12 @@ export default function Welcome(params) {
               by CPS.
             </h1>
             <h1 className="lg:text-center font-semibold text-lg py-4 text-blue-600 hover:underline">
-              <Link
+              <a
                 target="_blank"
-                href="https://www.ieee.org/conferences/organizers/conf-app.html?confRecNum=61146"
+                href={params.dynamicData.approveLink}
               >
                 Conference Approval Link
-              </Link>
+              </a>
             </h1>
             <h1 className="lg:text-center font-semibold">
               All accepted papers will be submitted by CPS to the indexing
@@ -50,10 +51,10 @@ export default function Welcome(params) {
               major Indexes).
             </h1>
             <p className="lg:text-center">
-              Start of paper submissions: 1st June 2023
+              Start of paper submissions: {params.dynamicData.paperSubmissionDate}
             </p>
             <h1 className="lg:text-center font-semibold text-lg">
-              Extended Paper Submission Deadline: 7th October, 2023
+              Extended Paper Submission Deadline: {params.dynamicData.extendedPaperSubmissionDate}
             </h1>
             <div className="lg:text-center space-y-3">
               <p>Authors Notified of Final Acceptance: 27 October 2023</p>

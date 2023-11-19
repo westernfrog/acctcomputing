@@ -1,3 +1,4 @@
+"use client"
 import {
   DocumentTextIcon,
   DocumentArrowDownIcon,
@@ -8,20 +9,23 @@ const links = [
   { name: "Call for Papers", href: "/", icon: DocumentTextIcon },
   { name: "Paper Submission", href: "/", icon: DocumentArrowDownIcon },
 ];
+import { getDoc,doc } from "firebase/firestore";
+import { useEffect ,useState} from "react";
+import { db } from "../firebaseConfig";
 
 export default function Overview(params) {
+  console.log(params)
   return (
     <>
       <main className="flex flex-col lg:items-center justify-center h-screen p-6 my-4">
         <div className="max-w-3xl mx-auto lg:text-center">
           <h1 className="lg:text-5xl text-2xl font-semibold mb-2 bg-gradient-to-r from-20% bg-clip-text text-transparent from-purple-400 to-amber-300">
-            International Conference on Advanced Computing & Communication
-            Technologies
+           {params.dynamicData.Title}
           </h1>
           <p className="lg:text-lg text-zinc-400">
-            SVIET, Banur (Near Chandigarh), Punjab, India
+            {params.dynamicData.Location}
           </p>
-          <p className="lg:text-lg text-zinc-400">23 - 24 December, 2023</p>
+          <p className="lg:text-lg text-zinc-400">{params.dynamicData.Date}</p>
         </div>
         <div className="flex lg:flex-row flex-col items-center gap-4 lg:mt-12 mt-8">
           {links.map((item, index) => (
