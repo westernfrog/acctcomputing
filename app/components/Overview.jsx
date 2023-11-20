@@ -34,9 +34,7 @@ export default function Overview(params) {
           <div className="max-w-4xl lg:text-center">
             <div className="px-6">
               <h1 className="lg:text-5xl text-2xl lg:font-bold font-semibold tracking-tight text-zinc-300 mb-3">
-                {/* {params.dynamicData.Title} */}
-                International Conference on Advanced Computing & Communication
-                Technologies
+                {params.dynamicData.Title}
               </h1>
               <p className="lg:text-lg text-zinc-300 font-medium">
                 {params.dynamicData.Location}
