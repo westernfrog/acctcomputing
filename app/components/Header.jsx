@@ -52,9 +52,9 @@ export default function Header() {
     }
   };
   return (
-    <header className="fixed top-0 inset-x-0 z-20">
+    <header className="fixed top-0 inset-x-0 z-20 bg-[#f4f4f4]">
       <nav
-        className="mx-auto flex max-w-7xl items-center justify-between p-6"
+        className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4"
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
@@ -84,14 +84,14 @@ export default function Header() {
             <Link
               key={index}
               href={item.href}
-              className="flex items-center gap-1 leading-6 mix-blend-difference hover:text-blue-600 transition duration-300 ease-in-out font-semibold text-lg"
+              className="flex items-center gap-1 leading-6 text-zinc-800 hover:text-blue-600 transition duration-300 ease-in-out font-semibold text-lg"
             >
               {item.name}
             </Link>
           ))}
           <Link
             href={urlReg}
-            className="flex items-center gap-1 leading-6 mix-blend-difference hover:text-blue-600 transition duration-300 ease-in-out font-semibold text-lg"
+            className="flex items-center gap-1 leading-6 text-zinc-800 hover:text-blue-600 transition duration-300 ease-in-out font-semibold text-lg"
           >
             Registration
           </Link>
