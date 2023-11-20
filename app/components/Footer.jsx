@@ -1,8 +1,4 @@
-import {
-  EnvelopeIcon,
-  MapPinIcon,
-  PhoneIcon,
-} from "@heroicons/react/24/outline";
+import { EnvelopeIcon, MapPinIcon, PhoneIcon } from "@heroicons/react/20/solid";
 import Link from "next/link";
 
 const social = [
@@ -26,10 +22,10 @@ const information = [
 export default function Footer(params) {
   return (
     <>
-      <footer className="text-zinc-400 border-t border-neutral-900 pt-12">
-        <div className="max-w-7xl mx-auto flex lg:flex-row flex-col items-start justify-between p-6 space-y-6 lg:space-y-0">
+      <footer className="border-t border-neutral-900 pt-12">
+        <div className="max-w-7xl mx-auto flex lg:flex-row flex-col items-start justify-between p-6 space-y-6 lg:space-y-0 font-medium">
           <div className="max-w-sm">
-            <h1 className="text-zinc-300 font-medium">
+            <h1 className="text-zinc-900">
               Swami Vivekanand Institute of Engineering and Technology (SVIET),
               Banur, Punjab, India
             </h1>
@@ -47,7 +43,7 @@ export default function Footer(params) {
               <Link
                 key={index}
                 href={item.href}
-                className="hover:underline pb-2"
+                className="hover:underline pb-2 text-zinc-700"
               >
                 {item.name}
               </Link>
@@ -60,7 +56,7 @@ export default function Footer(params) {
                 key={index}
                 className=" transform transition duration-500 hover:scale-110 lg:pb-4 pb-2 flex items-center gap-6"
               >
-                <item.icon className="w-5 h-5 stroke-blue-600" />
+                <item.icon className="w-6 h-6 fill-blue-600" />
                 {item.name}
               </a>
             ))}

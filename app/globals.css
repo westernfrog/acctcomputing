@@ -7,8 +7,11 @@
     letter-spacing: -0.2px;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    background-color: #09090b;
-    color: #d4d4d4;
+    color: #666666;
+    background-color: #ffffffcc;
     overflow-x: hidden;
+  }
+  h1 {
+    color: #171717;
   }
 }

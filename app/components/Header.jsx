@@ -32,7 +32,7 @@ const navigation = [
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [urlReg, setUrlReg] = useState("")
+  const [urlReg, setUrlReg] = useState("");
   useEffect(() => {
     // console.log("vikas");
     getData();
@@ -52,7 +52,7 @@ export default function Header() {
     }
   };
   return (
-    <header className="fixed top-0 inset-x-0 backdrop-blur bg-[#09090b]/30">
+    <header className="fixed top-0 inset-x-0 z-20">
       <nav
         className="mx-auto flex max-w-7xl items-center justify-between p-6"
         aria-label="Global"
@@ -72,31 +72,27 @@ export default function Header() {
         <div className="flex lg:hidden">
           <button
             type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-zinc-400"
+            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 "
             onClick={() => setMobileMenuOpen(true)}
           >
             <span className="sr-only">Open main menu</span>
-            <Bars3Icon className="h-6 w-6" aria-hidden="true" />
+            <Bars3Icon className="h-6 w-6 text-zinc-700" aria-hidden="true" />
           </button>
         </div>
-        <div className="hidden lg:flex lg:gap-x-4">
+        <div className="hidden lg:flex lg:gap-x-16">
           {navigation.map((item, index) => (
             <Link
               key={index}
               href={item.href}
-              className="flex items-center gap-1 leading-6 text-zinc-300 hover:text-zinc-100 bg-zinc-900 px-4 py-2 rounded-xl transition duration-300 ease-in-out text-sm"
+              className="flex items-center gap-1 leading-6 mix-blend-difference hover:text-blue-600 transition duration-300 ease-in-out font-semibold text-lg"
             >
-              <item.icon className="w-4 h-4" />
               {item.name}
             </Link>
           ))}
-        </div>
-        <div className="hidden lg:flex flex-1 justify-end">
           <Link
             href={urlReg}
-            className="flex items-center gap-2 leading-6 text-zinc-300 hover:text-zinc-100 bg-zinc-900 px-4 py-2 rounded-xl transition duration-300 ease-in-out text-sm"
+            className="flex items-center gap-1 leading-6 mix-blend-difference hover:text-blue-600 transition duration-300 ease-in-out font-semibold text-lg"
           >
-            <LinkIcon className="w-5 h-5" />
             Registration
           </Link>
         </div>
@@ -107,22 +103,12 @@ export default function Header() {
         open={mobileMenuOpen}
         onClose={setMobileMenuOpen}
       >
-        <div className="fixed inset-0 z-10" />
-        <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto p-4 px-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 bg-[#09090b]">
+        <div className="fixed inset-0 z-50" />
+        <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto p-6 px-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 bg-[#09090b]">
           <div className="flex items-center justify-between">
-            <Link href="/" className="-m-1.5 p-1.5">
-              <span className="sr-only">Acctcomputing</span>
-              <Image
-                width={100}
-                height={100}
-                className="h-10 w-auto"
-                src="https://acctcomputing.com/wp-content/uploads/2023/07/WhatsApp-Image-2023-07-05-at-7.33.41-PM-1.jpeg"
-                alt="Acctcomputing"
-              />
-            </Link>
             <button
               type="button"
-              className="-m-2.5 rounded-md p-2.5 text-zinc-400"
+              className="-m-2.5 rounded-md p-2.5 "
               onClick={() => setMobileMenuOpen(false)}
             >
               <span className="sr-only">Close menu</span>
@@ -139,7 +125,7 @@ export default function Header() {
                       <Link
                         key={index}
                         href={item.href}
-                        className="flex items-center gap-2 leading-6 text-zinc-400 hover:text-zinc-300 py-2 rounded-full transition duration-300 ease-in-out"
+                        className="flex items-center gap-2 leading-6  hover:text-zinc-300 py-2 rounded-full transition duration-300 ease-in-out"
                       >
                         <item.icon className="w-5 h-5" />
                         {item.name}
@@ -149,7 +135,7 @@ export default function Header() {
                 <div className="py-8 border-t border-zinc-900">
                   <Link
                     href={urlReg}
-                    className="flex items-center gap-2 leading-6 text-zinc-400 hover:text-zinc-300 py-2 rounded-full transition duration-300 ease-in-out"
+                    className="flex items-center gap-2 leading-6  hover:text-zinc-300 py-2 rounded-full transition duration-300 ease-in-out"
                   >
                     <LinkIcon className="w-5 h-5" />
                     Registration
