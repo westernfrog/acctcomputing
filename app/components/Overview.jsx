@@ -30,7 +30,7 @@ export default function Overview(params) {
           />
           <div className="absolute inset-0 z-10 h-screen w-screen bg-black/40 backdrop-blur-sm backdrop-opacity-50"></div>
         </div>
-        <div className="absolute z-30 top-24">
+        <div className="absolute z-30 lg:top-40 top-24">
           <div className="max-w-4xl lg:text-center">
             <div className="px-6">
               <h1 className="lg:text-5xl text-2xl lg:font-bold font-semibold tracking-tight text-zinc-300 mb-3">
