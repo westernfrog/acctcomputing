@@ -4,7 +4,7 @@ export default function Welcome(params) {
   console.log(params);
   return (
     <>
-      <div className="max-w-5xl mx-auto lg:my-40 my-12">
+      <div className="max-w-5xl mx-auto lg:my-40 ">
         <div className="lg:ring-2 ring-zinc-400 lg:p-16 p-6 rounded-3xl">
           <div className="lg:lg:text-center mb-5">
             <h1 className="lg:text-5xl text-2xl font-bold tracking-tight bg-gradient-to-b from-20% bg-clip-text text-transparent from-[#555] to-[#171717]">

@@ -1,28 +1,63 @@
+"use client";
+import { db } from "../../firebaseConfig";
+import {
+  getDocs,
+  addDoc,
+  getDoc,
+  collection,
+  doc,
+  updateDoc,
+} from "firebase/firestore";
+import { useEffect, useState } from "react";
 export default function Overview(params) {
+  const [formData, setFormData] = useState({
+    chiefs: [],
+    technicalProgramChairs: [],
+    "Co-Patron": [],
+    "Conference General Chair": [],
+  });
+
+  useEffect(() => {
+    getData();
+  }, []);
+  const getData = async () => {
+    const firebaseData = doc(db, "Website", "Comitte");
+
+    const docSnapshot = await getDoc(firebaseData);
+
+    if (docSnapshot.exists()) {
+      // Access the data from the document
+      const data = docSnapshot.data();
+      console.log("Document data:", data);
+      setFormData(data);
+    } else {
+      console.log("No such document!");
+    }
+  };
   return (
     <>
-      <main className="lg:my-44 my-20 max-w-5xl mx-auto">
+      <main className="lg:my-32 my-16 max-w-5xl mx-auto">
         <div className="lg:ring-1 ring-zinc-900 lg:p-16 p-6 rounded-3xl">
-          <div className="lg:lg:text-center mb-5">
-            <h1 className="lg:text-5xl text-3xl font-bold bg-gradient-to-b from-20% bg-clip-text text-transparent from-[#555] to-[#171717] tracking-tight">
+          <div className="lg:lg:text-center lg:mb-20 mb-8">
+            <h1 className="lg:text-5xl text-2xl font-semibold bg-gradient-to-r from-20% bg-clip-text text-transparent from-emerald-400 to-yellow-300 tracking-tight">
               Committee
             </h1>
           </div>
-          <div className="max-w-3xl mx-auto space-y-8">
+          <div className="max-w-3xl mx-auto space-y-8 text-zinc-400">
             <div className="">
               <h1 className="font-semibold text-lg mb-3">Chief Patron</h1>
               <ul className="space-y-2">
-                <li>Sh. Ashwani Garg, Chairman, SVGOI</li>
-                <li>Sh. Ashok Garg, President, SVGOI</li>
-                <li>Sh. Rakesh Kuchhal, Manager BOG, BMIET, India</li>
+                {formData.chiefs.map((item) => {
+                  return <li>{item}</li>;
+                })}
               </ul>
             </div>
             <div className="">
               <h1 className="font-semibold text-lg mb-3">Co-Patron</h1>
               <ul className="space-y-2">
-                <li>Sh. Vishal Garg, Director, SVGOI</li>
-                <li>Sh. Sahil Garg, Director, SVGOI</li>
-                <li>Sh. Shubham Garg, Director Placement, SVGOI</li>
+                {formData["Co-Patron"].map((item) => {
+                  return <li>{item}</li>;
+                })}
               </ul>
             </div>
             <div className="">

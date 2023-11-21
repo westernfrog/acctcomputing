@@ -52,7 +52,7 @@ export default function Header() {
     }
   };
   return (
-    <header className="fixed top-0 inset-x-0 z-20 bg-[#f4f4f4]">
+    <header className=" bg-[#f2f4f4]">
       <nav
         className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4"
         aria-label="Global"
