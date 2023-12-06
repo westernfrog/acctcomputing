@@ -9,14 +9,16 @@ import { ClipLoader,BounceLoader } from "react-spinners";
 export default function Home(params) {
   const [dynamicData, setDynamicData] = useState({});
   const [loading, setLoading] = useState(true);
-
+  const [bannerData, setBannerData] = useState([])
   useEffect(() => {
     getData();
+    
   }, []);
 
   const getData = async () => {
     try {
       const firebaseData = doc(db, "Website", "Data");
+      const firebaseDataBanner = doc(db, "Website", "Banner");
       const docSnapshot = await getDoc(firebaseData);
 
       if (docSnapshot.exists()) {
@@ -24,6 +26,16 @@ export default function Home(params) {
         const data = docSnapshot.data();
         console.log("Document data:", data);
         setDynamicData(data);
+      } else {
+        console.log("No such document!");
+      }
+      const docSnapshotBanner = await getDoc(firebaseDataBanner);
+
+      if (docSnapshotBanner.exists()) {
+        // Access the data from the document
+        const data = docSnapshotBanner.data();
+        console.log("Document data:", data.Images);
+        setBannerData(data.Images);
       } else {
         console.log("No such document!");
       }
@@ -59,7 +71,7 @@ export default function Home(params) {
       ) : (
         // Render your components once data is loaded
         <>
-          <Overview dynamicData={dynamicData} />
+          <Overview dynamicData={dynamicData} banner={bannerData}/>
           <Welcome dynamicData={dynamicData} />
         </>
       )}
